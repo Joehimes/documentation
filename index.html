@@ -14,16 +14,11 @@
       <ul>
         <li><a href="#introduction" class="nav-link">Introduction</a></li>
         <li><a href="#What_you_should_already_know" class="nav-link">What you should already know</a></li>
-        <li><a href="#Ruby" class="nav-link">Ruby</a></li>
         <li><a href="#Hello_world" class="nav-link">Hello world</a></li>
         <li><a href="#Variables" class="nav-link">Variables</a></li>
-        <li><a href="#Declaring_variables" class="nav-link">Declaring variables</a></li>
-        <li><a href="#Variable_scope" class="nav-link">Varible scope</a></li>
-        <li><a href="#Global_variables" class="nav-link">Global variables</a></li>
-        <li><a href="#Constants" class="nav-link">Constants</a></li>
         <li><a href="#Data_types" class="nav-link">Data types</a></li>
         <li><a href="#if...else_statements" class="nav-link">if...else statements</a></li>
-        <li><a href="#while_statements" class="nav-link">while statement</a></li>
+        <li><a href="#while_statements" class="nav-link">while statements</a></li>
         <li><a href="#Methods" class="nav-link">Methods</a></li>
         <li><a href="#Reference" class="nav-link">Reference</a></li>
       </ul>
@@ -50,46 +45,59 @@
         </ul>
       </section>
 
-      <section class="main-section" id="Ruby">
-        <header>
-          <h1>Ruby</h1>
-        </header>
-      </section>
-
       <section class="main-section" id="Hello_world">
         <header>
           <h1>Hello world</h1>
         </header>
+        <p>Ruby comes pre-installed with a very handy program called Interactive Ruby (irb for short). This allows you to test snippets of code directly from the command line instead typing it into a ruby file and then running the program. It is also great for learning the basics of ruby programming. To begin an irb session, open the terminal and type <code>irb</code>. Once the session begins, type:</p>
+        <code>puts "Hello, World!"</code>
+        <p>Notice how it responds with "Hello, World!"? You have just written your first line of ruby! For now you can ignore the part where it also prints out <code>nil</code>. Every action in ruby will return something, even if there is nothing to return.</p>
       </section>
 
       <section class="main-section" id="Variables">
         <header>
           <h1>Variables</h1>
         </header>
-      </section>
+        <p>In ruby, there are five types of variables.</p>
+        <ul>
+          <li>Global Variables</li>
+          <li>Instance Variables</li>
+          <li>Class Variables</li>
+          <li>Local Variables</li>
+          <li>Constants</li>
+        </ul>
+        <h3>Global Variables</h3>
+        <p>Global variables are not generally recommended for use. They alter the global status of programs and can make them cryptic. They are defined using a $ followed by a name.</p>
+        <code>$global_variable = 10</code>
+        <h3>Instance Variables</h3>
+        <p>Instance variables begin with @. These are used within a class when initializing a new instance of that class.</p>
+        <pre>
+          <code>
+  # Define Person Class
 
-      <section class="main-section" id="Declaring_variables">
-        <header>
-          <h1>Declaring variables</h1>
-        </header>
-      </section>
+  class Person
+    def initialize(name)
+      @name = name
+    end
 
-      <section class="main-section" id="Variable_scope">
-        <header>
-          <h1>Variable scope</h1>
-        </header>
-      </section>
+    def say_hello
+      puts "Hello! My name is #@name."
+    end
+  end
 
-      <section class="main-section" id="Global_variables">
-        <header>
-          <h1>Global variables</h1>
-        </header>
-      </section>
+  # Create New Person
+  person1 = Person.new("Joe")
 
-      <section class="main-section" id="Constants">
-        <header>
-          <h1>Constants</h1>
-        </header>
+  # Call Methods
+  person1.say_hello   #"Hello! My name is Joe."
+          </code>
+        </pre>
+        <h3>Class Variables</h3>
+        <p>Class variables are declared with @@. These variables are shared among instances of that class.</p>
+        <h3>Local Variables</h3>
+        <p>Local variables are the most widely used. They begin with a lower case letter or _. The scope of these variables is limited to where they are defined and ranges from class, method, module, or within a block's braces.</p>
+        <h3>Constants</h3>
+        <p>Contants begin with an uppercase letter and are generally all uppercase letters to distinguish themselves. When defined within a class they can be accessed from within that class. If defined outside a class they can be accessed globally.</p>
       </section>
 
       <section class="main-section" id="Data_types">
