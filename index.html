@@ -11,7 +11,7 @@
       <header class="header">
         <h1>Ruby Documentation</h1>
       </header>
-      <ul>
+      <ul class="nav-list">
         <li><a href="#introduction" class="nav-link">Introduction</a></li>
         <li><a href="#What_you_should_already_know" class="nav-link">What you should already know</a></li>
         <li><a href="#Hello_world" class="nav-link">Hello world</a></li>
@@ -50,7 +50,7 @@
           <h1>Hello world</h1>
         </header>
         <p>Ruby comes pre-installed with a very handy program called Interactive Ruby (irb for short). This allows you to test snippets of code directly from the command line instead typing it into a ruby file and then running the program. It is also great for learning the basics of ruby programming. To begin an irb session, open the terminal and type <code>irb</code>. Once the session begins, type:</p>
-        <code>puts "Hello, World!"</code>
+        <code class="code-block">puts "Hello, World!"</code>
         <p>Notice how it responds with "Hello, World!"? You have just written your first line of ruby! For now you can ignore the part where it also prints out <code>nil</code>. Every action in ruby will return something, even if there is nothing to return.</p>
       </section>
 
@@ -68,11 +68,11 @@
         </ul>
         <h3>Global Variables</h3>
         <p>Global variables are not generally recommended for use. They alter the global status of programs and can make them cryptic. They are defined using a $ followed by a name.</p>
-        <code>$global_variable = 10</code>
+        <code class="code-block">$global_variable = 10</code>
         <h3>Instance Variables</h3>
         <p>Instance variables begin with @. These are used within a class when initializing a new instance of that class.</p>
         <pre>
-          <code>
+          <code class="code-block">
   # Define Person Class
 
   class Person

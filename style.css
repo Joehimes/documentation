@@ -1,0 +1,79 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  width: 100%;
+  text-align: center;
+}
+
+.nav-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-list li {
+  border: 1px solid;
+  margin: 0;
+  padding: 2%;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+}
+
+.main-doc {
+  padding: 2%;
+}
+
+pre {
+  font-family: "Courier 10 Pitch", Courier, monospace;
+  font-size: 95%;
+  line-height: 140%;
+  white-space: pre;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -o-pre-wrap;
+}
+
+code {
+  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  font-size: 95%;
+  line-height: 140%;
+  white-space: pre;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -o-pre-wrap;
+  background: #faf8f0;
+}
+
+.code-block {
+  display: block;
+  padding: 0.5em 1em;
+  border: 1px solid #bebab0;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar {
+    padding-top: 3%;
+    width: 25%;
+    height: 100vh;
+    display: block;
+    position: fixed;
+    overflow: auto;
+    border-right: 1px solid;
+  }
+
+  .nav-list li {
+    padding: 5%;
+    font-size: 1.2em;
+  }
+
+  .main-doc {
+    margin-left: 25%;
+  }
+}
